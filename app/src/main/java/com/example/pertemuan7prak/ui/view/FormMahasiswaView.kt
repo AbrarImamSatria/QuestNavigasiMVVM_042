@@ -43,7 +43,7 @@ fun FormMahasiswa(
 
     val listData
     : MutableList<String> = mutableListOf(
-        nama, memilihJk, alamat
+        nama, memilihJk, alamat, nim, noTelpon, email
     )
 
     Column (modifier = modifier
