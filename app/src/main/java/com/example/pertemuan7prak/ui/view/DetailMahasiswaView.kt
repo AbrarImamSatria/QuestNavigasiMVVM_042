@@ -2,9 +2,12 @@ package com.example.pertemuan7prak.ui.view
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -14,7 +17,8 @@ import com.example.pertemuan7prak.model.Mahasiswa
 @Composable
 fun DetailMahasiswa(
     dataMhs: Mahasiswa,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onBackClick: () -> Unit
 ){
     val listDataMhs = listOf(
         Pair("Nama", dataMhs.nama),
@@ -34,8 +38,13 @@ fun DetailMahasiswa(
             DetailMhs(judul = data.first,
                 isi = data.second)
         }
+        Button(modifier = modifier
+            .fillMaxWidth(),
+            onClick = { onBackClick() },
+        ) {
+            Text(text = "Kembali")
+        }
     }
-
 }
 
 @Composable
