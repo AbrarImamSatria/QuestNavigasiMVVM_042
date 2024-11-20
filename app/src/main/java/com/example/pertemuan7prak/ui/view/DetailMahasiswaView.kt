@@ -18,7 +18,10 @@ fun DetailMahasiswa(
 ){
     val listDataMhs = listOf(
         Pair("Nama", dataMhs.nama),
+        Pair("Nim", dataMhs.nim),
+        Pair("Email", dataMhs.email),
         Pair("Gender", dataMhs.gender),
+        Pair("noTelepon", dataMhs.noTelepon),
         Pair("Alamat", dataMhs.alamat),
     )
 
